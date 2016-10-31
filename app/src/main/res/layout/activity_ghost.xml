@@ -1,0 +1,142 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".GhostActivity"
+    android:id="@+id/ghost">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:id="@+id/ghostText"
+        android:focusable = "true"
+        android:onClick="keyboard"
+        android:fontFamily="cursive"
+        android:clickable="true"
+        android:focusableInTouchMode = "true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Starting game"
+
+        android:id="@+id/gameStatus"
+
+        android:layout_below="@+id/ghostText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Left"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/left"/>
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Right"
+                android:checked="true"
+                android:gravity="center"
+                android:id="@+id/right"/>
+
+        </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/challengeBtn"
+                android:text="challenge"
+                android:gravity="center"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingTop="16dp"
+                android:src="@mipmap/user"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Score: "
+                android:paddingTop="16dp"
+                android:textSize="20sp"
+                android:id="@+id/user_score"/>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:onClick="onStart"
+            android:id="@+id/reset"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingTop="16dp"
+                android:src="@mipmap/computer"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comp Score: "
+                android:paddingTop="16dp"
+
+            android:textSize="20sp"
+            android:id="@+id/comp_score"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
